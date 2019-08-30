@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    android:orientation = "vertical">
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        app:cardElevation="5dp"
+        android:layout_marginStart = "@dimen/margin_medium_2"
+        android:layout_marginEnd = "@dimen/margin_medium_2"
+        android:layout_marginBottom = "@dimen/margin_medium_2"
+        app:cardCornerRadius = "@dimen/corner_material_card">
+
+        <RelativeLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "260dp">
+
+            <ImageView
+                android:id = "@+id/img_house"
+                android:layout_width = "match_parent"
+                android:layout_height = "150dp"
+                android:scaleType = "centerCrop"
+                android:src = "@drawable/dummy_detail_image" />
+
+            <org.mmtextview.components.MMTextView
+                android:id = "@+id/tv_house_price"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_alignBottom = "@id/img_house"
+                android:layout_marginStart = "@dimen/margin_large"
+                android:layout_marginBottom = "@dimen/margin_medium_2"
+                android:background = "@drawable/rounded_white_bg"
+                android:textStyle = "bold" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id = "@+id/fab_location"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_alignParentEnd = "true"
+                android:layout_marginEnd = "@dimen/margin_xlarge"
+                android:layout_marginTop="115dp"
+                android:src = "@drawable/ic_near_me"
+                android:tint = "@color/colorPrimary"
+                app:backgroundTint = "@android:color/white" />
+
+            <LinearLayout
+                android:id = "@+id/layout_loaction"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_above = "@id/layout_area_n_bed"
+                android:layout_marginStart = "@dimen/margin_medium_2"
+                android:layout_marginBottom = "@dimen/margin_medium_2"
+                android:orientation = "horizontal">
+
+                <ImageView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:src = "@drawable/ic_location" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id = "@+id/tv_house_location"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginStart = "@dimen/margin_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id = "@+id/layout_area_n_bed"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_alignParentBottom = "true"
+                android:layout_marginStart = "@dimen/margin_medium_2"
+                android:layout_marginBottom = "@dimen/margin_medium_2"
+                android:orientation = "horizontal">
+
+                <ImageView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:src = "@drawable/ic_selection" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id = "@+id/tv_house_area"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginStart = "@dimen/margin_medium"
+                    android:layout_marginEnd = "@dimen/margin_xxlarge" />
+
+                <ImageView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:src = "@drawable/ic_bed" />
+
+                <org.mmtextview.components.MMTextView
+                    android:id = "@+id/tv_house_bed_rooms"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginStart = "@dimen/margin_medium"
+                    android:text = "@string/bedroom_text" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+</LinearLayout>

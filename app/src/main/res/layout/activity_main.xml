@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:id = "@+id/container"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:layout_marginTop = "@dimen/margin_large"
+    tools:context = ".MainActivity">
+
+    <LinearLayout
+        android:id = "@+id/nav_bar"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/margin_medium_2"
+        android:orientation = "horizontal"
+        app:layout_constraintBottom_toTopOf = "@+id/main_frame_layout"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent">
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "@dimen/margin_medium_2"
+            android:layout_marginEnd = "@dimen/margin_medium_2"
+            android:layout_weight = "3.5"
+            android:elevation = "5dp">
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "45dp"
+                android:gravity = "center_vertical"
+                android:orientation = "horizontal">
+
+                <ImageView
+                    android:layout_width = "24dp"
+                    android:layout_height = "24dp"
+                    android:layout_marginStart = "@dimen/margin_small"
+                    android:layout_marginEnd = "@dimen/margin_small"
+                    android:scaleType = "centerCrop"
+                    android:src = "@android:drawable/ic_menu_search" />
+
+                <EditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:background = "@android:color/transparent"
+                    android:hint = "@string/type_your_location"
+                    android:inputType = "text" />
+
+            </LinearLayout>
+        </android.support.design.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center_vertical"
+            android:layout_weight = "1.5"
+            android:gravity = "end">
+
+            <ImageView
+                android:id = "@+id/imageView"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "@dimen/margin_medium"
+                android:src = "@drawable/ic_view_horizontal" />
+
+            <ImageView
+                android:id = "@+id/imageView2"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "@dimen/margin_medium"
+
+                android:src = "@drawable/ic_view_column" />
+
+            <ImageView
+                android:id = "@+id/imageView3"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "@dimen/margin_medium"
+
+                android:src = "@drawable/ic_view_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id = "@+id/main_frame_layout"
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:layout_marginTop = "@dimen/margin_medium"
+        app:layout_constraintBottom_toTopOf = "@+id/bottom_tab"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/nav_bar" />
+
+    <LinearLayout
+        android:id = "@+id/bottom_tab"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:baselineAligned = "false"
+        android:orientation = "horizontal"
+        android:paddingTop = "@dimen/margin_medium"
+        android:paddingBottom = "@dimen/margin_medium"
+        android:weightSum = "6"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintHorizontal_bias = "0.0"
+        app:layout_constraintStart_toStartOf = "parent">
+
+
+        <TextView
+            android:id = "@+id/tv_menu_for_you"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_weight = "1"
+            android:clickable = "true"
+            android:drawableTop = "@drawable/ic_for_you"
+            android:foreground = "@drawable/ripple_bg"
+            android:gravity = "center"
+            android:text = "@string/menu_for_you"
+            android:textColor = "@color/colorAccent"
+            android:textSize = "@dimen/text_small"
+            android:focusable = "true" />
+
+        <TextView
+            android:id = "@+id/tv_menu_share_me"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_weight = "1"
+            android:clickable = "true"
+            android:drawableTop = "@drawable/ic_for_you"
+            android:foreground = "@drawable/ripple_bg"
+            android:gravity = "center"
+            android:text = "@string/menu_share_me"
+            android:textColor = "@color/colorImageIconBg"
+            android:textSize = "@dimen/text_small" />
+
+
+        <TextView
+            android:id = "@+id/tv_menu_fav"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_weight = "1"
+            android:clickable = "true"
+            android:drawableTop = "@drawable/ic_favorite"
+            android:foreground = "@drawable/ripple_bg"
+            android:gravity = "center"
+            android:text = "@string/menu_favourite"
+            android:textColor = "@color/colorImageIconBg"
+            android:textSize = "@dimen/text_small" />
+
+        <TextView
+            android:id = "@+id/tv_menu_discover"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_weight = "1"
+            android:clickable = "true"
+            android:drawableTop = "@drawable/ic_explore"
+            android:foreground = "@drawable/ripple_bg"
+            android:gravity = "center"
+            android:text = "@string/menu_discover"
+            android:textColor = "@color/colorImageIconBg"
+            android:textSize = "@dimen/text_small" />
+
+
+        <TextView
+            android:id = "@+id/tv_menu_profile"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_weight = "1"
+            android:clickable = "true"
+            android:drawableTop = "@drawable/ic_person"
+            android:foreground = "@drawable/ripple_bg"
+            android:gravity = "center"
+            android:text = "@string/menu_profile"
+            android:textColor = "@color/colorImageIconBg"
+            android:textSize = "@dimen/text_small" />
+
+        <TextView
+            android:id = "@+id/tv_menu_more"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_weight = "1"
+            android:clickable = "true"
+            android:drawableTop = "@drawable/ic_more"
+            android:foreground = "@drawable/ripple_bg"
+            android:gravity = "center"
+            android:text = "@string/menu_more"
+            android:textColor = "@color/colorImageIconBg"
+            android:textSize = "@dimen/text_small" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name = "app_name">Assignment5</string>
+    <string name = "menu_for_you">For You</string>
+    <string name = "menu_share_me">Share Me</string>
+    <string name = "menu_favourite">Favourite</string>
+    <string name = "menu_discover">Discover</string>
+    <string name = "menu_profile">Profile</string>
+    <string name = "menu_more">More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name = "hello_blank_fragment">Hello blank fragment</string>
+    <string name = "query_hint">Type Your Address</string>
+    <string name = "add_favourite_text">Add Favourite</string>
+    <string name = "book_now_text">Book Now</string>
+    <string name = "single_family_house_text">Single Family House</string>
+    <string name = "loream">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</string>
+    <string name = "area_text">3200 sqft</string>
+    <string name = "location_detail">Webminster, London</string>
+    <string name = "see_review">See Review</string>
+    <string name = "see_photo">See Photo</string>
+    <string name = "dummy_price_detail">$ 12,000</string>
+    <string name = "bedroom_text">4 bedrooms</string>
+    <string name = "reviews_text">32 reviews</string>
+    <string name = "fav_text">324 favourite</string>
+    <string name = "str_house_area_template">%1$d sqft</string>
+    <string name = "type_your_location">Type Your Location</string>
+</resources>
