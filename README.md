@@ -31,8 +31,9 @@ implementation 'org.mmtextview:mmtextview:1.10'
 implementation 'com.jakewharton:butterknife:8.1.0'
 annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
 
-//picasso
-implementation 'com.squareup.picasso:picasso:2.5.2'
+//glide
+implementation 'com.github.bumptech.glide:glide:4.9.0'
+annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 ```
 ## Reference Image
 
