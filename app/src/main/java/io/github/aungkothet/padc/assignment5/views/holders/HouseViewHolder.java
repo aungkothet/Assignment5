@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,26 +16,23 @@ import io.github.aungkothet.padc.assignment5.delegates.HouseItemDelegate;
 
 public class HouseViewHolder extends BaseViewHolder<HouseVo> {
 
-//    @BindView(R.id.img_house)
+    @BindView(R.id.img_house)
     ImageView imgHouse;
 
-//    @BindView(R.id.tv_house_area)
+    @BindView(R.id.tv_house_area)
     TextView tvHouseArea;
 
-//    @BindView(R.id.tv_house_price)
+    @BindView(R.id.tv_house_price)
     TextView tvHousePrice;
 
-//    @BindView(R.id.tv_house_location)
+    @BindView(R.id.tv_house_location)
     TextView tvHouseLocation;
 
     private Context context;
+
     public HouseViewHolder(@NonNull View itemView, final HouseItemDelegate delegate) {
         super(itemView);
-//        ButterKnife.bind(itemView);
-        imgHouse = itemView.findViewById(R.id.img_house);
-        tvHouseArea = itemView.findViewById(R.id.tv_house_area);
-        tvHousePrice = itemView.findViewById(R.id.tv_house_price);
-        tvHouseLocation = itemView.findViewById(R.id.tv_house_location);
+        ButterKnife.bind(this, itemView);
         context = itemView.getContext();
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,12 +45,10 @@ public class HouseViewHolder extends BaseViewHolder<HouseVo> {
 
     @Override
     public void bindData(HouseVo data) {
-
-        System.out.println(data.getHouseImageUrl());
-        Picasso.with(context).load(data.getHouseImageUrl()).into(imgHouse);
+        Glide.with(itemView).load(data.getHouseImageUrl()).into(imgHouse);
         tvHouseArea.setText(context.getResources()
-                .getString(R.string.str_house_area_template,data.getSquare_feet()));
-        tvHousePrice.setText("$ "+data.getPrice());
+                .getString(R.string.str_house_area_template, data.getSquare_feet()));
+        tvHousePrice.setText("$ " + data.getPrice());
         tvHouseLocation.setText(data.getAddress());
 
     }

@@ -2,6 +2,8 @@ package io.github.aungkothet.padc.assignment5.adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import io.github.aungkothet.padc.assignment5.views.holders.BaseViewHolder;
@@ -13,6 +15,10 @@ public abstract class BaseRecyclerAdapter<T extends BaseViewHolder<W>, W> extend
 
     private List<W> mData; // W is generic Data Type for Binding data to viewHolder
 
+
+    BaseRecyclerAdapter(){
+        mData = new ArrayList<>();
+    }
 
     @Override
     public int getItemCount() {

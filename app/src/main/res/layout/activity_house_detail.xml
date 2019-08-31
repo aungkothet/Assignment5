@@ -4,7 +4,7 @@
     xmlns:tools = "http://schemas.android.com/tools"
     android:layout_width = "match_parent"
     android:layout_height = "match_parent"
-    tools:context = ".HouseDetailActivity">
+    tools:context = ".activities.HouseDetailActivity">
 
     <ScrollView
         android:layout_width = "match_parent"
@@ -23,10 +23,10 @@
                 android:src = "@drawable/dummy_detail_image" />
 
             <android.support.design.card.MaterialCardView
-                android:layout_alignBaseline="@id/img_back_btn"
                 android:id = "@+id/layout_search"
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"
+                android:layout_alignBaseline = "@id/img_back_btn"
                 android:layout_marginTop = "@dimen/margin_xxlarge"
                 android:layout_marginEnd = "@dimen/margin_medium_2"
                 android:layout_toEndOf = "@id/img_back_btn"
@@ -37,7 +37,8 @@
                     android:layout_height = "wrap_content"
                     android:background = "@android:color/transparent"
                     android:drawableStart = "@android:drawable/ic_menu_search"
-                    android:hint = "@string/type_your_location" />
+                    android:hint = "@string/type_your_location"
+                    android:inputType = "text" />
 
             </android.support.design.card.MaterialCardView>
 
@@ -79,10 +80,11 @@
 
                         <org.mmtextview.components.MMTextView
                             android:id = "@+id/tv_price_detail"
-                            android:layout_width = "wrap_content"
+                            android:layout_width = "match_parent"
                             android:layout_height = "wrap_content"
                             android:layout_alignBottom = "@id/fab_location_detail"
                             android:layout_marginBottom = "@dimen/margin_medium"
+                            android:layout_toStartOf = "@id/fab_location_detail"
                             android:text = "@string/dummy_price_detail"
                             android:textSize = "@dimen/text_heading_1x"
                             android:textStyle = "bold" />
@@ -123,6 +125,7 @@
                             android:layout_height = "wrap_content"
                             android:layout_below = "@id/layout_location_detail"
                             android:layout_marginTop = "@dimen/margin_medium_2"
+                            android:baselineAligned = "false"
                             android:orientation = "horizontal"
                             android:weightSum = "2">
 
@@ -171,6 +174,7 @@
                             android:layout_height = "wrap_content"
                             android:layout_below = "@id/layout_area_n_bed_detail"
                             android:layout_marginTop = "@dimen/margin_medium_2"
+                            android:baselineAligned = "false"
                             android:orientation = "horizontal"
                             android:weightSum = "2">
 

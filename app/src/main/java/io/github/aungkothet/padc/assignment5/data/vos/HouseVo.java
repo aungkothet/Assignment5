@@ -1,22 +1,39 @@
 package io.github.aungkothet.padc.assignment5.data.vos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class HouseVo {
 
-    private String house_image_url;
+    @SerializedName("house_image_url")
+    private String houseImageUrl;
+    
+    @SerializedName("name")
     private String name;
+    
+    @SerializedName("description")
     private String description;
+    
+    @SerializedName("price")
     private long price;
+    
+    @SerializedName("address")
     private String address;
-    private int square_feet;
+    
+    @SerializedName("square_feet")
+    private int squareFeet;
+
+    @SerializedName("latitude")
     private double latitude;
+
+    @SerializedName("longitude")
     private double longitude;
 
     public String getHouseImageUrl() {
-        return house_image_url;
+        return houseImageUrl;
     }
 
     public void setHouseImageUrl(String houseImageUrl) {
-        this.house_image_url = houseImageUrl;
+        this.houseImageUrl = houseImageUrl;
     }
 
     public String getName() {
@@ -52,11 +69,11 @@ public class HouseVo {
     }
 
     public int getSquare_feet() {
-        return square_feet;
+        return squareFeet;
     }
 
-    public void setSquare_feet(int square_feet) {
-        this.square_feet = square_feet;
+    public void setSquare_feet(int squareFeet) {
+        this.squareFeet = squareFeet;
     }
 
     public double getLatitude() {

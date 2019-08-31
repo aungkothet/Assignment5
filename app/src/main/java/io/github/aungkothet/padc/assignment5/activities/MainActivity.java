@@ -1,30 +1,42 @@
-package io.github.aungkothet.padc.assignment5;
+package io.github.aungkothet.padc.assignment5.activities;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import io.github.aungkothet.padc.assignment5.activities.BaseActivity;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import io.github.aungkothet.padc.assignment5.R;
 import io.github.aungkothet.padc.assignment5.delegates.HouseItemDelegate;
 import io.github.aungkothet.padc.assignment5.fragments.HomeFrameFragment;
 
 public class MainActivity extends BaseActivity implements HouseItemDelegate, View.OnClickListener {
 
-    TextView tvForYou,tvShareMe,tvFav,tvDiscover,tvProfile,tvMore;
+    @BindView(R.id.tv_menu_for_you)
+    TextView tvForYou;
+
+    @BindView(R.id.tv_menu_share_me)
+    TextView tvShareMe;
+
+    @BindView(R.id.tv_menu_fav)
+    TextView tvFav;
+
+    @BindView(R.id.tv_menu_discover)
+    TextView tvDiscover;
+
+    @BindView(R.id.tv_menu_profile)
+    TextView tvProfile;
+
+    @BindView(R.id.tv_menu_more)
+    TextView tvMore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,new HomeFrameFragment())
                 .commit();
-
-        tvForYou = findViewById(R.id.tv_menu_for_you);
-        tvShareMe = findViewById(R.id.tv_menu_share_me);
-        tvFav = findViewById(R.id.tv_menu_fav);
-        tvDiscover = findViewById(R.id.tv_menu_discover);
-        tvProfile = findViewById(R.id.tv_menu_profile);
-        tvMore = findViewById(R.id.tv_menu_more);
-
         tvForYou.setOnClickListener(this);
         tvShareMe.setOnClickListener(this);
         tvFav.setOnClickListener(this);

@@ -49,15 +49,15 @@ public class HouseListFragment extends Fragment {
         final HouseRecyclerAdapter adapter = new HouseRecyclerAdapter(houseItemDelegate);
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         pbLoading = view.findViewById(R.id.pb_loading);
-
         houseListRV.setLayoutManager(layoutManager);
+        houseListRV.setAdapter(adapter);
+
         HouseModelImpl.getObjInstance().getHouseList(Constants.ACCESS_TOKEN,
                 new HouseModel.GetHouseListFromDataLayerDelegate() {
             @Override
             public void onSuccess(List<HouseVo> houseVoList) {
                 adapter.setViewData(houseVoList);
                 pbLoading.setVisibility(View.GONE);
-                houseListRV.setAdapter(adapter);
             }
 
             @Override
@@ -66,6 +66,5 @@ public class HouseListFragment extends Fragment {
             }
         });
         return view;
-
     }
 }
