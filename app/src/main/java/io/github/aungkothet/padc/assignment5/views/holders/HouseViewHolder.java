@@ -37,7 +37,7 @@ public class HouseViewHolder extends BaseViewHolder<HouseVo> {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                delegate.onItemClicked();
+                delegate.onItemClicked(mData.getId());
             }
         });
     }
@@ -45,6 +45,7 @@ public class HouseViewHolder extends BaseViewHolder<HouseVo> {
 
     @Override
     public void bindData(HouseVo data) {
+        mData = data;
         Glide.with(itemView).load(data.getHouseImageUrl()).into(imgHouse);
         tvHouseArea.setText(context.getResources()
                 .getString(R.string.str_house_area_template, data.getSquare_feet()));

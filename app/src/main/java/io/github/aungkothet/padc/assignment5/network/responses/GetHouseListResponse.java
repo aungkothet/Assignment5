@@ -6,6 +6,8 @@ import java.util.List;
 
 import io.github.aungkothet.padc.assignment5.data.vos.HouseVo;
 
+import static io.github.aungkothet.padc.assignment5.utils.Constants.CODE_RESPONSE_OK;
+
 public class GetHouseListResponse {
 
     @SerializedName("code")
@@ -39,5 +41,9 @@ public class GetHouseListResponse {
 
     public void setData(List<HouseVo> data) {
         this.data = data;
+    }
+
+    public boolean isResponseOk(){
+        return code == CODE_RESPONSE_OK && data != null;
     }
 }

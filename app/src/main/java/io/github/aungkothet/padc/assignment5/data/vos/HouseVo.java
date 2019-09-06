@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class HouseVo {
 
+    @SerializedName("id")
+    private int id;
+
     @SerializedName("house_image_url")
     private String houseImageUrl;
     
@@ -27,6 +30,23 @@ public class HouseVo {
 
     @SerializedName("longitude")
     private double longitude;
+
+
+    public int getSquareFeet() {
+        return squareFeet;
+    }
+
+    public void setSquareFeet(int squareFeet) {
+        this.squareFeet = squareFeet;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getHouseImageUrl() {
         return houseImageUrl;

@@ -23,5 +23,8 @@
     <string name = "reviews_text">32 reviews</string>
     <string name = "fav_text">324 favourite</string>
     <string name = "str_house_area_template">%1$d sqft</string>
+    <string name = "str_geo"><![CDATA[http://maps.google.com/maps?daddr=]]>%1$f,%2$f</string>
+    <!--<string name = "str_geo">google.navigation:%1$f,%2$f?z=15</string>-->
     <string name = "type_your_location">Type Your Location</string>
+    <string name = "str_price">\$ %1$s</string>
 </resources>

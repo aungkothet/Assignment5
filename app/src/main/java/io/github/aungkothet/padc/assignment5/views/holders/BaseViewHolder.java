@@ -6,7 +6,7 @@ import android.view.View;
 
 public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
 
-    private T mData;// T is generic DataType which must bind data to the view holder
+    protected T mData;// T is generic DataType which must bind data to the view holder
 
     public abstract void bindData(T Data);
 

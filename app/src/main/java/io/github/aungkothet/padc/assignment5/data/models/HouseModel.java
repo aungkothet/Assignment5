@@ -8,6 +8,10 @@ public interface HouseModel {
 
     void getHouseList(String accessToken, GetHouseListFromDataLayerDelegate dataLayerDelegate);
 
+    HouseVo getHouseById(int houseID);
+
+    List<HouseVo> filterHouse(String query);
+
     interface GetHouseListFromDataLayerDelegate{
 
         void onSuccess(List<HouseVo> houseVoList);
